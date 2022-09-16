@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML Tags */
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+input {
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+/* Classes */
+.title {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.dataSizeInput {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.optionPane {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.DsOptionPane {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.DsOptionPane input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 5rem;
+    padding: 0.2rem;
+}
+
+.DsOptionPane input:focus {
+    outline: none
+}
+
+.arrOperations {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+}
+
+.arrOperations .flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.stackQOperations {
+    display: none;
+}
+
+.stackQOperations.flex {
+    gap: 1rem;
+}
+
+
+/* Array Visuals */
+.dataInDS {
+    font-weight: 400;
+}
+
+.baseAdd {
+    position: absolute;
+    bottom: -1.5rem;
+}
+
+.arrIndex {
+    position: absolute;
+    top: -1.5rem;
+}
+
+.arrayElement {
+    align-items: center;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    position: relative;
+    min-width: 4rem;
+    width: fit-content;
+}
+
+.elementFound{
+    align-items: center;
+    border: 1px solid rgb(0, 255, 21);
+    background-color: rgb(36, 173, 48);
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    position: relative;
+    width: fit-content;
+}
+
+.arrayContainer {
+    display: flex;
+}
+
+/* Stack Visuals */
+.stackContainer {
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: auto;
+    padding: 1rem 0.4rem 0.4rem;
+    width: fit-content;
+}
+
+.stackEle {
+    background-color: #BDE6F1;
+    border-bottom: 1px solid #16003B;
+    border-radius: 4px;
+    color: #16003B;
+    font-size: 1.5rem;
+    width: 20rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.stackEle::-webkit-scrollbar {
+    height: 5px;
+  }
+.stackEle::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.stackEle::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.stackEle::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Linked List Visuals */
+.LLNode {
+    display: flex;
+}
+
+.llArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+}
+
+/* Queue Visuals */
+.queueContainer {
+    display: flex;
+    padding: 1rem;
+}
+
+.queueEle {
+    padding: 1rem;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.queueEle span {
+    align-items: center;
+    background-color: #BDE6F1;
+    border-radius: 4px;
+    color: #16003B;
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    min-width: 5rem;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    overflow-x: auto;
+}
+
+.queueEle span::-webkit-scrollbar {
+    height: 5px;
+  }
+.queueEle span::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.queueEle span::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.queueEle span::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #112B3C;
+}
+
+.dsSelector {
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+.dsSelector option {
+    cursor: pointer;
+}
+
+/* Canvas */
+.canvas {
+    max-width: 1200px;
+    margin: 2rem auto;
+    min-height: 40vh;
+    overflow-x: auto;
+    position: relative;
+}
+
+.canvas::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+.canvas::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.canvas::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.canvas::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Info */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.moreInfo {
+    color: white;
+}
+
+/* ID's */
+#DSContainer {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+}
+/* Select CSS */
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #5c6664;
+    background-image: none;
+    padding: 0 .5em;
+    color:#fff;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+ .select:hover::after {
+    color: #23b499;
+ }
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+    .canvas {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .optionPane {
+        flex-direction: column;
+        width: fit-content;
+        gap: 1rem;
+    }
+}
